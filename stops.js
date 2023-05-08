@@ -84,6 +84,5 @@ buttonLap.onclick = function(){
     Laap = appendHours + " : " + appendMinutes.innerHTML + " : " + appendSeconds.innerHTML + " : " + appendTens.innerHTML;
     document.getElementById('lapRecord').innerHTML = document.getElementById('lapRecord').innerHTML + "<p>" + Laap + "</p>";
   }
-  
-
+ 
 }
