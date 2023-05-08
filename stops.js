@@ -15,6 +15,8 @@ window.onload = function () {
   var Interval ;
   let Laap = null;
 
+ let Laps = document.getElementById('lapRecord');
+
 
   buttonStart.onclick = function() {
     
@@ -36,7 +38,7 @@ window.onload = function () {
   	appendSeconds.innerHTML = seconds;
     appendMinutes.innerHTML = minutes;
     appendHours.innerHTML = hours;
-    document.getElementById('lapRecord').innerHTML = "";
+    Laps.innerHTML = "";
   }
   
    
@@ -81,8 +83,8 @@ window.onload = function () {
     }
 }
 buttonLap.onclick = function(){
-    Laap = appendHours + " : " + appendMinutes.innerHTML + " : " + appendSeconds.innerHTML + " : " + appendTens.innerHTML;
-    document.getElementById('lapRecord').innerHTML = document.getElementById('lapRecord').innerHTML + "<p>" + Laap + "</p>";
+    Laps.innerHTML += "<li>" + appendHours + " : " + appendMinutes.innerHTML + " : " + appendSeconds.innerHTML + " : " + appendTens.innerHTML + "</li>";
   }
- 
+  
+
 }
