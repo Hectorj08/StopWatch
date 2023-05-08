@@ -71,11 +71,14 @@ button:hover {
 }
 .laps{
     width: 250px;
-    list-style: none;
     color: white;
     height: 250px;
     text-align: center;
     overflow-y:scroll;
+}
+#lapRecord{
+  display:flex;
+  flex-direction: column-reverse;
 }
 
 #laps::-webkit-scrollbar {
