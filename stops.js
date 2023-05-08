@@ -7,7 +7,7 @@ window.onload = function () {
   let appendTens = document.getElementById("tens");
   let appendSeconds = document.getElementById("seconds");
   let appendMinutes = document.getElementById("minutes");
-  let appendHours = document.getElementById("Hours");
+  let appendHours = document.getElementById("hours");
   var buttonStart = document.getElementById('button-start');
   var buttonStop = document.getElementById('button-stop');
   var buttonReset = document.getElementById('button-reset');
@@ -53,9 +53,9 @@ window.onload = function () {
     if (tens > 99) {
       console.log("seconds");
       seconds++;
-      appendSeconds.innerHTML = "0" + seconds;
-      tens = 0;
-      appendTens.innerHTML = "0" + 0;
+      appendSeconds.innerHTML = seconds;
+      tens=0;
+      appendTens.innerHTML = "0" + tens;
     
     if(seconds > 60){
         console.log("minutes")
@@ -68,11 +68,9 @@ window.onload = function () {
     }
    } 
   }
-    
     if (seconds < 10){
       appendSeconds.innerHTML = seconds;
     }
-
     if (minutes > 59){
     appendMinutes.innerHTML = minutes;
     }
@@ -83,7 +81,7 @@ window.onload = function () {
     }
 }
 buttonLap.onclick = function(){
-    Laap = appendHours + " : " + appendMinutes + " : " + appendSeconds + " : " + appendTens;
+    Laap = appendHours + " : " + appendMinutes.innerHTML + " : " + appendSeconds.innerHTML + " : " + appendTens.innerHTML;
     document.getElementById('lapRecord').innerHTML = document.getElementById('lapRecord').innerHTML + "<p>" + Laap + "</p>";
   }
   
