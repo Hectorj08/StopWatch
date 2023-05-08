@@ -13,7 +13,6 @@ window.onload = function () {
   var buttonReset = document.getElementById('button-reset');
   var buttonLap = document.getElementById('button-lap');
   var Interval ;
-  let Laap = null;
 
  let Laps = document.getElementById('lapRecord');
 
@@ -34,6 +33,7 @@ window.onload = function () {
     tens = "00";
   	seconds = "00";
     minutes = "00";
+    hours = "00";
     appendTens.innerHTML = tens;
   	appendSeconds.innerHTML = seconds;
     appendMinutes.innerHTML = minutes;
@@ -59,13 +59,16 @@ window.onload = function () {
       tens=0;
       appendTens.innerHTML = "0" + tens;
     
-    if(seconds > 60){
-        console.log("minutes")
+    if(seconds > 59){
+        console.log("minutes");
         minutes++;
+        appendMinutes.innerHTML = minutes;
         seconds = 0;
     
     if(minutes > 60){
+      console.log("hours");
         hours++;
+        appendHours = hours;
         minutes = 0;
     }
    } 
